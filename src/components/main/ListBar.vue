@@ -47,19 +47,6 @@
         background: rgba(255, 255, 255, 0.4);
     }
 
-    .v-list-item__icon {
-        margin-left: 8px !important;
-    }
-
-    .v-list-item__subtitle {
-        /*text-align: right !important;*/
-        /*direction: rtl !important;*/
-        color: red !important;
-    }
-
-    .v-list-item__avatar {
-        margin-left: 8px !important;
-    }
 </style>
 
 <script>
@@ -76,7 +63,7 @@
                 {text: 'داشبورد', icon: 'mdi-view-dashboard', link: '/'},
                 {text: 'واریز وجه', icon: 'mdi-cash-plus', link: '/deposit'},
                 {text: 'برداشت وجه', icon: 'mdi-cash-minus', link: '/about'},
-                {text: 'گردش حساب', icon: 'mdi-credit-card-settings',link:'/news'},
+                {text: 'گردش حساب', icon: 'mdi-credit-card-settings',link:'/transaction'},
                 {text: 'تماس با ما', icon: 'mdi-card-account-phone',link:'/about-us'},
             ],
         }),

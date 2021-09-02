@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Deposit from '../components/money/Deposit'
 import LastLogin from '../views/LastLogin'
 import News from '../views/News'
+import Transactions from "../views/Transactions";
 
 Vue.use(VueRouter)
 
@@ -43,6 +44,11 @@ const routes = [
         path: '/news',
         name: 'News',
         component: News
+    },
+    {
+        path: '/transaction',
+        name: 'Transaction',
+        component: Transactions
     }
 ]
 
