@@ -5,6 +5,8 @@ import Deposit from '../components/money/Deposit'
 import LastLogin from '../views/LastLogin'
 import News from '../views/News'
 import Transactions from "../views/Transactions";
+import Graphql from "../views/Graphql";
+import Login from "../views/Login";
 
 Vue.use(VueRouter)
 
@@ -49,6 +51,16 @@ const routes = [
         path: '/transaction',
         name: 'Transaction',
         component: Transactions
+    },
+    {
+        path: '/graphql',
+        name: 'Graphql',
+        component: Graphql
+    },
+    {
+        path: '/login',
+        name: 'Login',
+        component: Login
     }
 ]
 
