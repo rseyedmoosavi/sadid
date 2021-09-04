@@ -34,7 +34,7 @@
         </v-navigation-drawer>
         <template>
             <div class="pa-2">
-                <v-btn block>
+                <v-btn block @click="logout">
                     خروج
                 </v-btn>
             </div>
@@ -50,7 +50,9 @@
 </style>
 
 <script>
-    export default {
+import {GC_AUTH_TOKEN, GC_USER_ID} from "../../constants/settings";
+
+export default {
         props: {
             name: String,
             email: String,
@@ -67,6 +69,13 @@
                 {text: 'تماس با ما', icon: 'mdi-card-account-phone',link:'/about-us'},
             ],
         }),
-        methods: {}
+        methods: {
+          logout(){
+            localStorage.removeItem(GC_USER_ID)
+            localStorage.removeItem(GC_AUTH_TOKEN)
+            this.$store.commit('logout')
+            this.$router.push({path: '/login'})
+          }
+        }
     }
 </script>

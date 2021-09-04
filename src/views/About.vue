@@ -11,6 +11,8 @@
         components: {
             apexchart
         },
+      computed:{
+      },
         data() {
             return {
                 series: [

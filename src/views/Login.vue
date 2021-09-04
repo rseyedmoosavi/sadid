@@ -36,13 +36,15 @@ export default {
   data () {
     return {
       login: true,
-      username: '',
-      password: '',
+      username: 'superadmin',
+      password: 'Admin123',
       name: ''
     }
   },
+  beforeCreate() {
+  },
   methods: {
-    confirm () {
+    confirm  () {
       const { name, username, password } = this.$data
       if (this.login) {
         this.$apollo.mutate({
@@ -66,6 +68,8 @@ export default {
       localStorage.setItem(GC_USER_ID, id)
       localStorage.setItem(GC_AUTH_TOKEN, token)
       this.$root.$data.userId = localStorage.getItem(GC_USER_ID)
+      this.$store.commit('login')
+      // alert(this.$store.getters.isLogin)
     }
   }
 }
